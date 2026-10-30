@@ -21,6 +21,15 @@ For building components or another image, follow [BUILD.md](BUILD.md). All comma
 
 Public packages contain recipes and code, not private Apple firmware, calibration, device trees captured from hardware, or session credentials. Device-specific inputs are prepared separately on the user's host.
 
+
+## Control an already-running Omarchy desktop from a Mac
+
+[iPad Controls](https://github.com/micro23/ipad-controls) is a small native macOS app that supplies mouse and keyboard input after the iPad has reached its Omarchy Linux desktop. Look at the iPad for its display; click the Mac app's pad to capture input and press Escape to release it. This is useful during bring-up when native touch or attached input is unavailable.
+
+It uses your own authenticated SSH connection and temporary Linux uinput devices. Requirements include Python 3, permission to access `/dev/uinput`, an already-running compositor, and a verified SSH host key. The tested hardware is iPad Air 2/J81 with Labwc; other devices remain unqualified. The optional System info action requires the matching Omarchy About adapter. It does not boot or install Linux.
+
+See the [setup instructions](https://github.com/micro23/ipad-controls#configure-your-connection) and [releases](https://github.com/micro23/ipad-controls/releases). Public builds contain no owner credentials or private device data; each user configures their connection locally.
+
 ## License
 
 See [LICENSE](LICENSE), [NOTICE](NOTICE), `LICENSES/`, and per-file SPDX identifiers for component licenses and upstream credits.
